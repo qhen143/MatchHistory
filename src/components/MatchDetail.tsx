@@ -15,7 +15,7 @@ interface IState {
     comment: string
 }
 
-export default class MemeDetail extends React.Component<IProps, IState> {
+export default class MatchDetail extends React.Component<IProps, IState> {
 
     constructor(props: any) {
         super(props)   

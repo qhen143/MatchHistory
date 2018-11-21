@@ -21,7 +21,7 @@ body{
   padding-top: 10px;
 }
 
-/* Selected Meme */
+/* Selected Match */
 .match-wrapper {
   padding-top:20px;
   padding-left: 30px;
@@ -90,12 +90,12 @@ body{
   right: 0px;
 }
 
-/* Meme List */
-.meme-list-wrapper {
+/* Match List */
+.match-list-wrapper {
   padding-top:20px;
 }
 
-.meme-list-table {
+.match-list-table {
   margin-top: 20px;
   height: calc(100vh - 140px);
   overflow-y: scroll;

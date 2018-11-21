@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Modal from 'react-responsive-modal';
 import './App.css';
-import MemeDetail from './components/MemeDetail';
-import MemeList from './components/MemeList';
+import MatchDetail from './components/MatchDetail';
+import MatchList from './components/MatchList';
 import PatrickLogo from './patrick-logo.png';
 
 
@@ -31,7 +31,7 @@ class App extends React.Component<{}, IState> {
 			open: false,
 			uploadFileList: null
 		}     	
-		this.selectNewMeme = this.selectNewMeme.bind(this)
+		this.selectNewMatch = this.selectNewMatch.bind(this)
 		this.fetchMatchHistory = this.fetchMatchHistory.bind(this)
 		this.fetchMatchHistory("")
 	}
@@ -42,30 +42,30 @@ class App extends React.Component<{}, IState> {
 		<div>
 			<div className="header-wrapper">
 				<div className="container header">
-					<img src={PatrickLogo} height='40'/>&nbsp; My Meme Bank - MSA 2018 &nbsp;
-					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}>Add Meme</div>
+					<img src={PatrickLogo} height='40'/>&nbsp; Valid8Ball &nbsp;
+					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}>Submit New Match</div>
 				</div>
 			</div>
 			<div className="container">
 				<div className="row">
 					<div className="col-7">
-						<MemeDetail currentMatch={this.state.currentMatch} />
+						<MatchDetail currentMatch={this.state.currentMatch} />
 					</div>
 					<div className="col-5">
-						<MemeList matchHistory={this.state.matchHistory} selectNewMatch={this.selectNewMeme} searchByTag={this.fetchMatchHistory}/>
+						<MatchList matchHistory={this.state.matchHistory} selectNewMatch={this.selectNewMatch} searchByTag={this.fetchMatchHistory}/>
 					</div>
 				</div>
 			</div>
 			<Modal open={open} onClose={this.onCloseModal}>
 				<form>
 					<div className="form-group">
-						<label>Meme Title</label>
-						<input type="text" className="form-control" id="meme-title-input" placeholder="Enter Title" />
-						<small className="form-text text-muted">You can edit any meme later</small>
+						<label>Match Details</label>
+						<input type="text" className="form-control" id="match-title-input" placeholder="Enter Title" />
+						<small className="form-text text-muted">You can edit any match later</small>
 					</div>
 					<div className="form-group">
 						<label>Tag</label>
-						<input type="text" className="form-control" id="meme-tag-input" placeholder="Enter Tag" />
+						<input type="text" className="form-control" id="match-tag-input" placeholder="Enter Tag" />
 						<small className="form-text text-muted">Tag is used for search</small>
 					</div>
 					<div className="form-group">
@@ -94,10 +94,10 @@ class App extends React.Component<{}, IState> {
 		this.setState({ open: false });
 	};
 	
-	// Change selected meme
-	private selectNewMeme(newMeme: any) {
+	// Change selected match
+	private selectNewMatch(newMatch: any) {
 		this.setState({
-			currentMatch: newMeme
+			currentMatch: newMatch
 		})
 	}
 

@@ -6,7 +6,7 @@ interface IProps {
     searchByTag: any
 }
 
-export default class MemeList extends React.Component<IProps, {}> {
+export default class MatchList extends React.Component<IProps, {}> {
     constructor(props: any) {
         super(props)   
         this.searchByTag = this.searchByTag.bind(this)
@@ -14,8 +14,8 @@ export default class MemeList extends React.Component<IProps, {}> {
 
 	public render() {
 		return (
-			<div className="container meme-list-wrapper">
-                <div className="row meme-list-heading">
+			<div className="container match-list-wrapper">
+                <div className="row match-list-heading">
                     <div className="input-group">
                         <input type="text" id="search-tag-textbox" className="form-control" placeholder="Search By Tags" />
                         <div className="input-group-append">
@@ -23,7 +23,7 @@ export default class MemeList extends React.Component<IProps, {}> {
                         </div>
                     </div>  
                 </div>
-                <div className="row meme-list-table">
+                <div className="row match-list-table">
                     <table className="table table-striped">
                         <tbody>
                             {this.createTable()}
@@ -34,7 +34,7 @@ export default class MemeList extends React.Component<IProps, {}> {
 		);
     }
 
-    // Construct table using meme list
+    // Construct table using match history list
 	private createTable() {
         const table:any[] = []
         const matchHistoryList = this.props.matchHistory
@@ -55,7 +55,7 @@ export default class MemeList extends React.Component<IProps, {}> {
         return table
     }
     
-    // Meme selection handler to display selected meme in details component
+    // Match selection handler to display selected match in details component
     private selectRow(index: any) {
         const selectedMatch = this.props.matchHistory[index]
         if (selectedMatch != null) {
@@ -63,7 +63,7 @@ export default class MemeList extends React.Component<IProps, {}> {
         }
     }
 
-    // Search meme by tag
+    // Search match by tag
     private searchByTag() {
         const textBox = document.getElementById("search-tag-textbox") as HTMLInputElement
         if (textBox === null) {
