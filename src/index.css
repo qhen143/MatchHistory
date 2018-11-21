@@ -2,7 +2,6 @@
 
 body{
   background-color:#ffffff;
-  /* font-family: Helvetica; */
   font-family: 'Quicksand';
 }
 
@@ -15,10 +14,15 @@ body{
   box-shadow: 0.5vh 0.5vh 1vh grey;
 }
 
+.header-img {
+  padding-left: 2vw;
+
+}
+
 .header {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-weight: bold;
   position: relative;
@@ -28,12 +32,7 @@ body{
 /* Selected Match */
 .match-wrapper {
   padding-top:3vh;
-  /* padding-left: 10px; */
-  /* padding-right: 20vw; */
-  /* margin-right: 10vw; */
-  /* margin-left: 10vw; */
   height: calc(100vh - 1.5*10vh);
-  /* background-color: #f10b0b; */
   background-color: #252525;
   margin-top: 3vh;
   border-bottom: 1px solid #eeeeee;
@@ -60,7 +59,6 @@ body{
   justify-content: left;
   font-weight: normal;
   font-size: 7vh;
-  /* background-color: #0b2ef1; */
   padding-left: 2vw;
 }
 
@@ -69,7 +67,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #eeeeee; */
   overflow: hidden;
 }
 
@@ -78,7 +75,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #eeeeee; */
   overflow: hidden;
   font-size: 6vh;
 }
@@ -88,7 +84,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #eeeeee; */
   overflow: hidden;
   font-size: 4vh;
 }
@@ -141,14 +136,13 @@ body{
 /* Match List */
 .match-list-wrapper {
   padding-top:2vh;
-  /* background-color: #d6d6d6; */
   height: calc(100vh - 1.5*10vh);
   margin-top: 3vh;
 }
 
 .match-list-table {
   margin-top: 2vh;
-  height: calc(100vh - 1.5*10vh - 10vh);
+  height: calc(100vh - 1.5*10vh - 20vh);
   overflow-y: scroll;
   cursor: pointer;
 }

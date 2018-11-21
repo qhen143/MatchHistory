@@ -3,7 +3,11 @@ import Modal from 'react-responsive-modal';
 import './App.css';
 import MatchDetail from './components/MatchDetail';
 import MatchList from './components/MatchList';
-import PatrickLogo from './patrick-logo.png';
+import TitleIMG from './title.png';
+// import PatrickLogo from './patrick-logo.png';
+import Valid8Logo from './valid8-logo.png';
+
+
 
 
 interface IState {
@@ -42,7 +46,9 @@ class App extends React.Component<{}, IState> {
 		<div>
 			<div className="header-wrapper">
 				<div className="container header">
-					<img src={PatrickLogo} height='40'/>&nbsp; Valid8 &nbsp;
+					<img className = "header-img" src={Valid8Logo} height='40'/>
+					<img className = "header-img" src={TitleIMG} height='40'/>
+					&nbsp; Valid8 &nbsp;
 					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}>Submit New Match</div>
 				</div>
 			</div>
@@ -52,7 +58,7 @@ class App extends React.Component<{}, IState> {
 						<MatchDetail currentMatch={this.state.currentMatch} />
 					</div>
 					<div className="col-5">
-						<MatchList matchHistory={this.state.matchHistory} selectNewMatch={this.selectNewMatch} searchByTag={this.fetchMatchHistory}/>
+						<MatchList matchHistory={this.state.matchHistory} selectNewMatch={this.selectNewMatch} searchByTag={this.fetchMatchHistory} />
 					</div>
 				</div>
 			</div>
