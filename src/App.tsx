@@ -38,11 +38,11 @@ class App extends React.Component<{}, IState> {
 
 	public render() {
 		const { open } = this.state;
-		return (
+		return (	
 		<div>
 			<div className="header-wrapper">
 				<div className="container header">
-					<img src={PatrickLogo} height='40'/>&nbsp; Valid8Ball &nbsp;
+					<img src={PatrickLogo} height='40'/>&nbsp; Valid8 &nbsp;
 					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}>Submit New Match</div>
 				</div>
 			</div>

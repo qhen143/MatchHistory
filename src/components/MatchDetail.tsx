@@ -50,21 +50,26 @@ export default class MatchDetail extends React.Component<IProps, IState> {
         const { open } = this.state;
 		return (
 			<div className="container match-wrapper" >
-                <div className="row match-heading" >
-                    <b>{currentMatch.id}.</b>&nbsp; ({currentMatch.location})
+                <div className = "container match-header-wrapper">
+                    <div className="row match-heading" >
+                        <b>Match#{currentMatch.id}</b>&nbsp; {currentMatch.date}
+                    </div>
+                    <div className="row match-heading">
+                        {currentMatch.location}
+                    </div>
                 </div>
-                <div className="row match-date">
-                    {currentMatch.date}
+                <div className = "container match-detail-wrapper">
+                    <div className="row match-title">
+                        {currentMatch.home} vs. {currentMatch.opposition}
+                    </div>
+                    <div className="row match-subtitle">
+                        Winner: {currentMatch.winner}
+                    </div>
+                    <div className="row match-body">
+                        Comments: {currentMatch.comment}
+                    </div>
                 </div>
-                <div className="row match-img">
-                    {/* <img src={currentMatch.url}/> */}
-                    {currentMatch.home} vs. {currentMatch.opposition}//n
-                    Winner: {currentMatch.winner}
-                    Comments: {currentMatch.comment}
-                </div>
-                
                 <div className="row match-done-button">
-                    <div className="btn btn-primary btn-action" onClick={this.downloadMeme.bind(this, currentMatch.url)}>Download </div>
                     <div className="btn btn-primary btn-action" onClick={this.onOpenModal}>Edit </div>
                     <div className="btn btn-primary btn-action" onClick={this.deleteMatch.bind(this, currentMatch.id)}>Delete </div>
                 </div>
@@ -121,11 +126,6 @@ export default class MatchDetail extends React.Component<IProps, IState> {
     private onCloseModal = () => {
         this.setState({ open: false });
     };
-
-    // Open meme image in new tab
-    private downloadMeme(url: any) {
-        window.open(url);
-    }
 
     private updateMatch(){
         const locationInput = document.getElementById("match-edit-location-input") as HTMLInputElement
