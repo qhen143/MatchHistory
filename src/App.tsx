@@ -46,9 +46,9 @@ class App extends React.Component<{}, IState> {
 		<div>
 			<div className="header-wrapper">
 				<div className="container header">
-					<img className = "header-img" src={Valid8Logo} height='40'/>
-					{/* Credits to cooltext.com for image generated title.*/}
-					<img className = "header-img" src={TitleIMG} height='40'/>
+					<img className = "header-img" src={Valid8Logo}/>
+					{/* Credits to cooltext.com for image generated title */}
+					<img className = "header-img" src={TitleIMG}/>
 					&nbsp; Valid8 &nbsp;
 					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}>Submit New Match</div>
 				</div>
