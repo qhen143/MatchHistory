@@ -75,34 +75,29 @@ export default class MatchDetail extends React.Component<IProps, IState> {
                 </div>
                 <Modal open={open} onClose={this.onCloseModal}>
                     <form>
+                    <small> Fields with * are required.</small>
                         <div className="form-group">
-                            <label>Match Location</label>
+                            <label>Match Location*</label>
                             <input type="text" className="form-control" id="match-edit-location-input" value={this.state.location} onChange={this.handleLocationChange}/>
-                            <small className="form-text text-muted">You can edit any meme later</small>
                         </div>
                         <div className="form-group">
-                            <label>Game Type</label>
+                            <label>Game Type*</label>
                             <input type="text" className="form-control" id="match-edit-game-input" value={this.state.game} onChange={this.handleGameChange}/>
-                            <small className="form-text text-muted">You can edit any meme later</small>
                         </div><div className="form-group">
-                            <label>Home</label>
+                            <label>Home*</label>
                             <input type="text" className="form-control" id="match-edit-home-input" value={this.state.home} onChange={this.handleHomeChange}/>
-                            <small className="form-text text-muted">You can edit any meme later</small>
                         </div>
                         <div className="form-group">
-                            <label>Opposition</label>
+                            <label>Opposition*</label>
                             <input type="text" className="form-control" id="match-edit-opposition-input" value={this.state.opposition} onChange={this.handleOppositionChange}/>
-                            <small className="form-text text-muted">You can edit any meme later</small>
                         </div>
                         <div className="form-group">
-                            <label>Match Winner</label>
+                            <label>Match Winner*</label>
                             <input type="text" className="form-control" id="match-edit-winner-input" value={this.state.winner} onChange={this.handleWinnerChange}/>
-                            <small className="form-text text-muted">You can edit any meme later</small>
                         </div>
                         <div className="form-group">
                             <label>Match Comment</label>
                             <input type="text" className="form-control" id="match-edit-comment-input" value={this.state.comment} onChange={this.handleCommentChange}/>
-                            <small className="form-text text-muted">You can edit any meme later</small>
                         </div>
                         <button type="button" className="btn" onClick={this.updateMatch}>Save</button>
                     </form>

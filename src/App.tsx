@@ -49,8 +49,7 @@ class App extends React.Component<{}, IState> {
 					<img className = "header-img" src={Valid8Logo}/>
 					{/* Credits to cooltext.com for image generated title */}
 					<img className = "header-img" src={TitleIMG}/>
-					&nbsp; Valid8 &nbsp;
-					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}>Submit New Match</div>
+					<div className="btn btn-primary btn-action btn-add" onClick={this.onOpenModal}> Login </div>
 				</div>
 			</div>
 			<div className="container">
@@ -66,21 +65,14 @@ class App extends React.Component<{}, IState> {
 			<Modal open={open} onClose={this.onCloseModal}>
 				<form>
 					<div className="form-group">
-						<label>Match Details</label>
-						<input type="text" className="form-control" id="match-title-input" placeholder="Enter Title" />
-						<small className="form-text text-muted">You can edit any match later</small>
+						<label> Username </label>
+						<input type="text" className="form-control" id="match-title-input" placeholder="TameImpala" />
 					</div>
 					<div className="form-group">
-						<label>Tag</label>
-						<input type="text" className="form-control" id="match-tag-input" placeholder="Enter Tag" />
-						<small className="form-text text-muted">Tag is used for search</small>
+						<label>Password</label>
+						<input type="password" className="form-control" id="match-tag-input" />
 					</div>
-					<div className="form-group">
-						<label>Image</label>
-						<input type="file" onChange={this.methodNotImplemented} className="form-control-file" id="meme-image-input" />
-					</div>
-
-					<button type="button" className="btn" onClick={this.methodNotImplemented}>Upload</button>
+					<button type="button" className="btn" onClick={this.methodNotImplemented}>Login</button>
 				</form>
 			</Modal>
 		</div>

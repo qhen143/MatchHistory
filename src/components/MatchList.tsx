@@ -39,7 +39,7 @@ export default class MatchList extends React.Component<IProps, IState, {}> {
 			<div className="container match-list-wrapper">
                 <div className="row match-list-heading">
                     <div className="input-group">
-                        <input type="text" id="search-tag-textbox" className="form-control" placeholder="Search By Player" />
+                        <input type="text" id="search-tag-textbox" className="form-control search-tag" placeholder="Search By Player" />
                         <div className="input-group-append">
                             <div className="btn btn-outline-secondary search-button" onClick = {this.searchByTag}>Search</div>
                         </div>
@@ -53,7 +53,7 @@ export default class MatchList extends React.Component<IProps, IState, {}> {
                     </table>
                 </div>
                 <div className="row match-done-button">
-                    <div className="btn btn-primary btn-action" onClick={this.onOpenModal}>Submit New Match</div>
+                    <div className="btn btn-primary btn-action sub" onClick={this.onOpenModal}>Submit New Match</div>
                 </div>
                 <Modal open={open} onClose={this.onCloseModal} >
 				<form>
