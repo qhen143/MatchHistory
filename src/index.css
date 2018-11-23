@@ -26,29 +26,28 @@ body{
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-weight: bold;
   position: relative;
-  padding-top: calc((10vh - 6vh)/2);
+  padding-top: 2vh;
 }
 
 /* Selected Match */
 .match-wrapper {
   padding-top:3vh;
-  height: calc(100vh - 1.5*10vh);
+  height: 85vh;
   background-color: #252525;
   margin-top: 3vh;
   border-bottom: 1px solid #eeeeee;
 }
 
 .match-header-wrapper {
-  height:calc((100vh - 1.5*10vh) -3vh -7vh*2 - 5vh);
+  height:25vh;
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
 
 }
 
 .match-detail-wrapper {
-  height:calc(100vh - 1.5*10vh - 7vh*2 - 22vh);
+  height: 45vh;
   background-color: #ffffff;
-  /* height: 50vh; */
   border-bottom: 1px solid #eeeeee;
 
 }
@@ -136,13 +135,13 @@ body{
 /* Match List */
 .match-list-wrapper {
   padding-top:2vh;
-  height: calc(100vh - 1.5*10vh);
+  height: 85vh;
   margin-top: 3vh;
 }
 
 .match-list-table {
   margin-top: 2vh;
-  height: calc(100vh - 1.5*10vh - 20vh);
+  height: 65vh;
   overflow-y: scroll;
   cursor: pointer;
 }
